@@ -7,3 +7,8 @@ class Court :
         self.width = width
         self.height = height
         self.canvas.pack()
+        my_font = ("consolas",50)
+        self.board = self.canvas.create_text(width/2,65,font = my_font)
+    def draw_score(self,score1,score2):
+        scores = str(score1) + " : " + str(score2)
+        self.canvas.itemconfigure(self.board,text = scores)
